@@ -1,6 +1,65 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>SWMG Soundboard</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="script.js"></script>
+    </head>
     <body>
-        <h1>SOUNDBOARD!!!!!</h1>
+
+        <h1>Shadow Wizard Money Gang: Soundboard</h1>
+
+        <ul>
+            <li><button onclick="displayBoards()">Display Soundboards</button></li>
+            <li><button onclick="hideBoards()">Hide Soundboards</button></li>
+            <li><button onclick="displayBites()">Display Soundbites</button></li>
+            <li><button onclick="hideBites()">Hide Soundbites</button></li>
+        </ul>
+
+
+        <div id="addSound">
+
+            <button onclick="createTable(3,3)">Add a Soundboard</button>
+            
+
+        </div>
+
+        <div id="soundboards" hidden>
+
+            <h2>Soundboards</h2>
+
+            <table class="soundboard0">
+                <tr>
+                    <td>Sound 1</td>
+                    <td>Sound 2</td>
+                    <td>Sound 3</td>
+                </tr>
+                <tr>
+                    <td>Sound 4</td>
+                    <td>Sound 5</td>
+                    <td>Sound 6</td>
+                </tr>
+                <tr>
+                    <td>Sound 7</td>
+                    <td>Sound 8</td>
+                    <td>Sound 9</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div id="soundbites" hidden>
+
+            <h2>Soundbites</h2>
+
+            <ul>
+                <li>Sound 1</li>
+                <li>Sound 2</li>
+                <li>Sound 3</li>
+                <li>Sound 4</li>
+                <li>Sound 5</li>
+            </ul>
+
+        </div>
     </body>
 </html>
