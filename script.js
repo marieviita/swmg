@@ -35,6 +35,8 @@ function createTable(w, h) {
             const td = tr.insertCell();
             let button = document.createElement('button');
             button.textContent = "Sound";
+            button.classList.add("sound_button${j}");
+            button.addEventListener("click", playSound)
             td.appendChild(button);
 
         }
@@ -59,4 +61,11 @@ function addSoundboard() {
     
 
     
+}
+
+function playSound() {
+
+    var audio = new Audio('EXTREMELY LOUD INCORRECT BUZZER.mp3');
+    audio.play();
+
 }
