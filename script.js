@@ -69,3 +69,10 @@ function playSound() {
     audio.play();
 
 }
+
+function playMonkeySound() {
+
+    var audio = new Audio('Caesar says no.mp3');
+    audio.play();
+
+}
