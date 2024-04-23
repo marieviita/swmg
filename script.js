@@ -15,7 +15,7 @@ let callAPI = ()=>{
 
     fetch("https://0news8eew2.execute-api.us-east-1.amazonaws.com/dev/", requestOptions)
     .then(response => response.text())
-    .then(result => alert(JSON.parse(result).body))
+    .then(result => console.log(JSON.parse(result).body))
     .catch(error => console.log('error', error));
 
 }
