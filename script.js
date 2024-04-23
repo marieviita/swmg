@@ -15,11 +15,16 @@ let callAPI = ()=>{
 
     fetch("https://0news8eew2.execute-api.us-east-1.amazonaws.com/dev/", requestOptions)
     .then(response => response.text())
-    .then(result => console.log(JSON.parse(result).body))
+    .then(result => displayOut(result))
     .catch(error => console.log('error', error));
 
 }
 
+function displayOut(res) {
+
+    document.createElement('p').textContent(res);
+
+}
 
 function displayBoards() {
 
