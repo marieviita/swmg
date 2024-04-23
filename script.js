@@ -22,12 +22,14 @@ let callAPI = ()=>{
 
 function displayOut(res) {
 
-    let txt = document.createElement('p');
-    let text = document.createTextNode(res);
+    let para = document.createElement("p");
+    let node = document.createTextNode(res);
+    para.appendChild(node);
 
-    txt.appendChild(text);
-    body.appendChild(txt);
+    let element = document.getElementById("addSound");
+    element.appendChild(para);
 
+    
 }
 
 function displayBoards() {
