@@ -1,8 +1,8 @@
-let callAPI = (firstName,lastName)=>{
+let callAPI = ()=>{
 
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    let raw = JSON.stringify({"firstName":firstName,"lastName":lastName});
+    let raw = JSON.stringify({"ID":"2"});
 
     let requestOptions = {
 
