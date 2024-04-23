@@ -15,22 +15,17 @@ let callAPI = ()=>{
 
     fetch("https://0news8eew2.execute-api.us-east-1.amazonaws.com/dev/", requestOptions)
     .then(response => response.text())
-    .then(result => displayOut(result))
+    .then(result => function displayLink(){ return result; })
     .catch(error => console.log('error', error));
 
 }
 
-function displayOut(res) {
+function addRow() {
 
-    let para = document.createElement("p");
-    let node = document.createTextNode(res);
-    para.appendChild(node);
-
-    let element = document.getElementById("addSound");
-    element.appendChild(para);
-
+    let link = displayLink()
     
 }
+
 
 function displayBoards() {
 
