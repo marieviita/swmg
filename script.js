@@ -13,7 +13,7 @@ let callAPI = ()=>{
 
     };
 
-    fetch("aws:execute-api:us-east-1:851725606363:0news8eew2/*/POST/", requestOptions)
+    fetch("arn:aws:execute-api:us-east-1:851725606363:0news8eew2/*/POST/", requestOptions)
     .then(response => response.text())
     .then(result => alert(JSON.parse(result).body))
     .catch(error => console.log('error', error));
