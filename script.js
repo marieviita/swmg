@@ -1,3 +1,26 @@
+let callAPI = (firstName,lastName)=>{
+
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    let raw = JSON.stringify({"firstName":firstName,"lastName":lastName});
+
+    let requestOptions = {
+
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+
+    };
+
+    fetch("arn:aws:execute-api:us-east-1:851725606363:0news8eew2/*/POST/", requestOptions)
+    .then(response => response.text())
+    .then(result => alert(JSON.parse(result).body))
+    .catch(error => console.log('error', error));
+
+}
+
+
 function displayBoards() {
 
     document.getElementById("soundboards").style.display = "inline";
@@ -65,14 +88,14 @@ function addSoundboard() {
 
 function playSound() {
 
-    var audio = new Audio('EXTREMELY LOUD INCORRECT BUZZER.mp3');
+    let audio = new Audio('EXTREMELY LOUD INCORRECT BUZZER.mp3');
     audio.play();
 
 }
 
 function playMonkeySound() {
 
-    var audio = new Audio('Caesar says no.mp3');
+    let audio = new Audio('Caesar says no.mp3');
     audio.play();
 
 }
