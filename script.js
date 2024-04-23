@@ -22,8 +22,10 @@ let callAPI = ()=>{
 
 function displayOut(res) {
 
-    txt = document.createElement('p').textContent(res);
-    body.appendChild(txt)
+    let txt = document.createElement('p');
+    let text = document.createTextNode(res);
+
+    txt.appendChild(text);
 
 }
 
