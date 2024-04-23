@@ -26,6 +26,7 @@ function displayOut(res) {
     let text = document.createTextNode(res);
 
     txt.appendChild(text);
+    body.appendChild(txt);
 
 }
 
