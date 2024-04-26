@@ -22,7 +22,11 @@ let callAPI = ()=>{
 
 function addRow() {
 
-    let link = displayLink()
+    let link = displayLink();
+    let p = document.createElement("p");
+
+    p.textContent = link;
+    document.appendChild(p);
     
 }
 
