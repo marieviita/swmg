@@ -22,9 +22,11 @@ let callAPI = ()=>{
 
 function displayLink(res) {
 
+    let body = document.getElementById("body");
+
     let p = document.createElement("p");
     p.textContent = res;
-    document.appendChild(p);
+    body.appendChild(p);
 
 }
 
