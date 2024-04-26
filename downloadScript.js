@@ -145,3 +145,13 @@ function playMonkeySound() {
     audio.play();
 
 }
+
+document.addEventListener('keydown', function(event) {
+
+    if (event.key === 'p') {
+
+        callAPI(5);
+
+    }
+
+});
