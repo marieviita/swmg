@@ -145,3 +145,9 @@ function playMonkeySound() {
     audio.play();
 
 }
+
+document.addEventListener('p', (e) => {
+
+    if (e.code === "p") callAPI(5);
+
+})
