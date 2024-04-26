@@ -33,7 +33,7 @@ function displayLink(res) {
 function testSound(link) {
 
     let newLink = stripLink(link)
-    console.log('test')
+    console.log(newLink)
 
     let audio = new Audio();
     audio.play(newLink);
