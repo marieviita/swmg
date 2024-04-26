@@ -146,8 +146,12 @@ function playMonkeySound() {
 
 }
 
-document.addEventListener('p', (e) => {
+document.addEventListener('keydown', function(event) {
 
-    if (e.code === "p") callAPI(5);
+    if (event.key === 'p') {
 
-})
+        callAPI(5);
+
+    }
+
+});
