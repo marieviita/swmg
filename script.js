@@ -25,8 +25,34 @@ function displayLink(res) {
     let body = document.getElementById("body");
 
     let p = document.createElement("p");
-    p.textContent = res;
+    p.textContent = stripLink(res);
     body.appendChild(p);
+
+}
+
+function stripLink(link) {
+
+    const data = JSON.parse(link);
+
+    if (data.body) {
+
+        const body = JSON.parse(data.body);
+
+        if (body.Item && body.Item['S3 Bucket Address']) {
+
+            return body.Item['S3 Bucket Address'];
+
+        } else {
+
+            return "Does not exist";
+
+        }
+
+    } else {
+
+        return "Body doesn't exist"
+
+    }
 
 }
 
