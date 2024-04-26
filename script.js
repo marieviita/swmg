@@ -15,7 +15,7 @@ let callAPI = ()=>{
 
     fetch("https://0news8eew2.execute-api.us-east-1.amazonaws.com/dev/", requestOptions)
     .then(response => response.text())
-    .then(result => displayLink(result))
+    .then(result => testSound(result))
     .catch(error => console.log('error', error));
 
 }
@@ -27,6 +27,15 @@ function displayLink(res) {
     let p = document.createElement("p");
     p.textContent = stripLink(res);
     body.appendChild(p);
+
+}
+
+function testSound(link) {
+
+    let newLink = stripLink(link)
+
+    let audio = new Audio();
+    audio.play(newLink);
 
 }
 
