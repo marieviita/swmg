@@ -15,19 +15,17 @@ let callAPI = ()=>{
 
     fetch("https://0news8eew2.execute-api.us-east-1.amazonaws.com/dev/", requestOptions)
     .then(response => response.text())
-    .then(result => function displayLink(){ return result; })
+    .then(result => displayLink(result))
     .catch(error => console.log('error', error));
 
 }
 
-function addRow() {
+function displayLink(res) {
 
-    let link = displayLink();
     let p = document.createElement("p");
-
-    p.textContent = link;
+    p.textContent = res;
     document.appendChild(p);
-    
+
 }
 
 
