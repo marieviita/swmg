@@ -1,8 +1,40 @@
-ul {
+#top-buttons ul {
 
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
 }
+
+#top-buttons li {
+
+    display: inline;
+    float: left;
+
+}
+
+#top-buttons button {
+
+    display: block;
+    padding: 8px;
+
+}
+
+#top-buttons li button {
+
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+
 
 .button {
     background-color: #04AA6D; /* Green */
