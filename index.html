@@ -7,36 +7,23 @@
         <script src="upload.js"></script>
     </head>
     <body id="body">
+        
+        <div id="top-buttons">
+            <ul>
+                <li><button class="button" onclick="displayBoards()" style="vertical-align:middle"><span>Display Soundboards </span></button></li>
+                <li><button class="button" onclick="hideBoards()" style="vertical-align:middle"><span>Hide Soundboards </span></button></li>
+                <li><button class="button" onclick="displayBites()" style="vertical-align:middle"><span>Display Soundbites </span></button></li>
+                <li><button class="button" onclick="hideBites()" style="vertical-align:middle"><span>Hide Soundbites </span></button></li>
+            </ul>
+        </div>
+        <br><br><br>
 
-        <button onclick="callAPI()">Call API</button>
         <table>
             <tr>
-                <td><button onclick="callAPI(1)">ID: 1</button></td>
-                <td><button onclick="callAPI(2)">ID: 2</button></td>
-                <td><button onclick="callAPI(3)">ID: 3</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="callAPI(4)">ID: 4</button></td>
-                <td><button onclick="callAPI(5)">ID: 5</button></td>
-                <td><button onclick="callAPI(6)">ID: 6</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="callAPI(7)">ID: 7</button></td>
+                <td><h1>Shadow Wizard Money Gang: Soundboard</h1></td>
+                <td><button onclick="playMonkeySound()"><img src="monkey.jpg"></button></td>
             </tr>
         </table>
-
-        <button onclick="playMonkeySound()"><img src="monkey.jpg"></button><br><br><br><br>
-
-        <h1>Shadow Wizard Money Gang: Soundboard</h1>
-
-        <ul>
-            <li><button class="button" onclick="displayBoards()" style="vertical-align:middle"><span>Display Soundboards </span></button></li>
-            <li><button class="button" onclick="hideBoards()" style="vertical-align:middle"><span>Hide Soundboards </span></button></li>
-            <li><button class="button" onclick="displayBites()" style="vertical-align:middle"><span>Display Soundbites </span></button></li>
-            <li><button class="button" onclick="hideBites()" style="vertical-align:middle"><span>Hide Soundbites </span></button></li>
-            <li><button class="button" onclick="addRow()" style="vertical-align:middle"><span>Add Row </span></button></li>
-        </ul>
-
 
         <div id="addSound">
 
