@@ -10,13 +10,6 @@
         <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-
-
-        <form action="get-soundid.php" method="get">
-        ID: <input type="text" name="id" placeholder="ID">
-        <input type="submit">
-        </form>
-
         <div id="top-buttons">
             <ul>
                 <li><button class="button" onclick="displayBoards()" style="vertical-align:middle"><span>Display Soundboards </span></button></li>
@@ -79,11 +72,7 @@
 
         </div>
 
-        <form method="post" id="upload-form">
-            <label for="file">File</label>
-            <input id="file" name="file" type="file" />
-            <button>Upload</button>
-        </form>
+        <input type="file" id="input" multiple />
 
     </body>
 </html>
