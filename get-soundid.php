@@ -1,7 +1,7 @@
 <html>
 <body>
 
-ID: <?php echo $_GET["numba"]; ?>
+ID: <?php echo $_POST["numba"]; ?>
 
 </body>
 </html>
