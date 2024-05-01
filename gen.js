@@ -1,5 +1,7 @@
 function bonnify() {
 
+    deleteShit()
+
     document.body.style.backgroundImage = "url('unnamed.jpg')";
     document.body.style.backgroundSize = "100% 100%";
 
