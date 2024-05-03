@@ -1,7 +1,7 @@
 function getPresignedUrl(file: File) {
 
     return makeAPIRequest(
-        "POST",
+        "PUT",
         "upload/create",
         {
             original_filename: file.name,
