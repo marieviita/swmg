@@ -1,7 +1,7 @@
 function bonnify() {
 
 
-    document.body.style.backgroundImage = "url('unnamed.jpg')";
+    document.body.style.backgroundImage = "url('bonn.jpg')";
     document.body.style.backgroundSize = "100% 100%";
 
 
