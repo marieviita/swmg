@@ -141,6 +141,7 @@ function playSound() {
 
 function playMonkeySound() {
 
+    <img src="monkey.jpg"></img>
     let audio = new Audio('Caesar says no.mp3');
     audio.play();
 
