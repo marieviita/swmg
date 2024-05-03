@@ -10,3 +10,12 @@ function bonnify() {
 
 
 }
+function monkeyify() {
+    document.body.style.backgroundImage = "url('monkey.jpg')";
+    document.body.style.backgroundSize = "100% 100%";
+
+
+    let monkey = new Audio('Caesar says no.mp3');
+    monkey.play();
+
+}
