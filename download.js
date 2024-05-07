@@ -34,14 +34,31 @@ const blob = new Blob(['binary'], { type: "audio/mpeg" });
 req.send(blob);
 }
 
-async function audioToBase64(audioFile) {
-    return new Promise((resolve, reject) => {
-      let reader = new FileReader();
-      reader.onerror = reject;
-      reader.onload = (e) => resolve(e.target.result);
-      reader.readAsDataURL(audioFile);
-    });
-  };
+function audioToBase64(e) {	
+    var create_url = 'https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket/placeholder.mp3';
+
+	var form = document.uploadFile;
+	var segments = document.uploadFile.base64Encoding.value.split(",");
+	var encodedContents = segments[1];
+	console.log("here is the form for uploading" + form.actor);
+
+
+	var data = {};
+	data["encodedContents"] = encodedContents;
+	
+
+	var js = JSON.stringify(data);
+	console.log("JS:" + js);
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", create_url, true);
+
+	// send the collected data as JSON
+	xhr.send(js);
+
+	// This will process results and update HTML as appropriate. 
+	
+
+}
 
 let uploadbinarymp32 = (mp3)=>{
     console.log("upload executed");
