@@ -34,17 +34,26 @@ const blob = new Blob(['binary'], { type: "audio/mpeg" });
 req.send(blob);
 }
 
+async function audioToBase64(audioFile) {
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader();
+      reader.onerror = reject;
+      reader.onload = (e) => resolve(e.target.result);
+      reader.readAsDataURL(audioFile);
+    });
+  };
 
 let uploadbinarymp32 = (mp3)=>{
+    console.log("upload executed");
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    let binary = new Buffer(mp3, 'binary').toString('binary');
-
+    let base64 = audioToBase64(mp3);
+    
     let requestOptions = {
 
         method: 'POST',
         headers: myHeaders,
-        body: binary,
+        body: base64,
         redirect: 'follow'
 
     };
