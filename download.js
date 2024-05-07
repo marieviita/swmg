@@ -1,3 +1,4 @@
+
 let callAPI = (id)=>{
 
     let myHeaders = new Headers();
@@ -14,6 +15,41 @@ let callAPI = (id)=>{
     };
 
     fetch("https://0news8eew2.execute-api.us-east-1.amazonaws.com/dev/", requestOptions)
+    .then(response => response.text())
+    .then(result => testSound(result))
+    .catch(error => console.log('error', error));
+
+}
+//hi naphin, this is jackson, no idea if any of this will work but i think this is a step in the right direciton
+//we need to convert .mp3 files intp binary data, and upload it with a post request using the html within req.open POST
+function uploadbinarymp3(id2) {
+    const req = new XMLHttpRequest();
+req.open("POST", 'https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket/placeholder.mp3', true);
+req.onload = (event) => {
+  // Uploaded
+};
+
+const blob = new Blob(['binary'], { type: "audio/mpeg" });
+
+req.send(blob);
+}
+
+
+let uploadbinarymp32 = (mp3)=>{
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    let binary = new Buffer(mp3, 'binary').toString('binary');
+
+    let requestOptions = {
+
+        method: 'POST',
+        headers: myHeaders,
+        body: binary,
+        redirect: 'follow'
+
+    };
+
+    fetch('https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket/placeholder.mp3', requestOptions)
     .then(response => response.text())
     .then(result => testSound(result))
     .catch(error => console.log('error', error));
