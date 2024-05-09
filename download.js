@@ -36,7 +36,7 @@ req.send(blob);
 
 function audioToBase64(e) {	
     console.log("audioTOBase64 called");
-    var create_url = 'https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket';
+    var create_url = 'https://bf5e6u4c2e.execute-api.us-east-1.amazonaws.com/alpha';
 
 	var form = document.uploadFile;
 	var segments = document.uploadFile.base64Encoding.value.split(",");
