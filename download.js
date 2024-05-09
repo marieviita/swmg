@@ -52,7 +52,7 @@ function audioToBase64(e) {
 	console.log("JS:" + js);
 	var xhr = new XMLHttpRequest();
 
-    xhr.open("POST", create_url, true);
+    xhr.open("PUT", create_url, true);
     xhr.setRequestHeader(
             'Content-type', 'application/json');
        
