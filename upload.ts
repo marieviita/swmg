@@ -2,7 +2,7 @@ function getPresignedUrl(file: File) {
 
     return makeAPIRequest(
         "PUT",
-        "upload/create",
+        "audio/mpeg",
         {
             original_filename: file.name,
             content_type: file.type,

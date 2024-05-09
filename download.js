@@ -35,7 +35,7 @@ req.send(blob);
 }
 
 function audioToBase64(e) {	
-    var create_url = 'https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket';
+    var create_url = 'https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket/file';
 
 	var form = document.uploadFile;
 	var segments = document.uploadFile.base64Encoding.value.split(",");
