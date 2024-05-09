@@ -35,7 +35,7 @@ req.send(blob);
 }
 
 function audioToBase64(e) {	
-    var create_url = 'https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket/placeholder.mp3';
+    var create_url = 'https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket/';
 
 	var form = document.uploadFile;
 	var segments = document.uploadFile.base64Encoding.value.split(",");
@@ -74,7 +74,6 @@ let uploadbinarymp32 = (mp3)=>{
         redirect: 'follow'
 
     };
-
     fetch('https://ghsdi7jahb.execute-api.us-east-1.amazonaws.com/dev/swmg-bocket/placeholder.mp3', requestOptions)
     .then(response => response.text())
     .then(result => testSound(result))
