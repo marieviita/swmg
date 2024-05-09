@@ -56,6 +56,7 @@ function audioToBase64(e) {
     xhr.setRequestHeader(
             'Content-type', 'application/json');
     xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 
     xhr.onload = function() {
           // Callback function (Error, response text)
