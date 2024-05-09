@@ -50,7 +50,7 @@ function audioToBase64(e) {
 	var js = JSON.stringify(data);
 	console.log("JS:" + js);
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", create_url, true);
+	xhr.open("PUT", create_url, true);
 
 	// send the collected data as JSON
 	xhr.send(js);
