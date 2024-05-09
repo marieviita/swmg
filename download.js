@@ -55,7 +55,8 @@ function audioToBase64(e) {
     xhr.open("PUT", create_url, true);
     xhr.setRequestHeader(
             'Content-type', 'application/json');
-       
+    xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+
     xhr.onload = function() {
           // Callback function (Error, response text)
           callback(null, this.responseText);
@@ -64,9 +65,6 @@ function audioToBase64(e) {
         // Since the data is an object so
         // we need to stringify it
 //    xhr.send(JSON.stringify(data));
-
-	
-
 	// send the collected data as JSON
 	xhr.send(js);
 
