@@ -51,7 +51,21 @@ function audioToBase64(e) {
 	var js = JSON.stringify(data);
 	console.log("JS:" + js);
 	var xhr = new XMLHttpRequest();
-	xhr.open("PUT", create_url, true);
+
+    xhr.open("PUT", create_url, true);
+    xhr.setRequestHeader(
+            'Content-type', 'application/json');
+       
+    xhr.onload = function() {
+          // Callback function (Error, response text)
+          callback(null, this.responseText);
+        }
+       
+        // Since the data is an object so
+        // we need to stringify it
+//    xhr.send(JSON.stringify(data));
+
+	
 
 	// send the collected data as JSON
 	xhr.send(js);
